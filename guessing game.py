@@ -7,10 +7,13 @@ print("Every number has a hint.")
 print("You have 3 chances to guess correctly.")
 print("Let's Play!\n\n")
 
-guess_count = 3
-guess_counter = 1
+guess_count = 3 #Number of chances.
+guess_counter = 1 #The chance at which you are.
+
+#Generating random number from 1 to 10.
 secret_num = random.randint(1,10)
 
+#Providing a hint for each number(please improve these as these are pretty lame).
 if secret_num == 1:
     print("Hint : It is not prime but composite.\n\n")
 
@@ -42,20 +45,31 @@ elif secret_num == 10:
     print("Hint : Ankara Messi!\nAnkara Messi!\nAnkara Messi!\nGoooaaal!!!\n\n")
 
 
-
+#Initialising a while loop to iterate 3 times.
 while guess_counter <= guess_count:
+    
+    #Taking input from the user or making the player guess.
     guess = int(input("Guess - "))
     if guess == secret_num:
         print("You won!")
-        playsound(r"C:\Users\devas\Downloads\congo.mp3")
+        
+        #Playing sound for dramatical purposes
+        playsound(r"path\congo.mp3")
         break
+        
+    elif guess_counter < guess_count:
+        
+        #Playing sound for dramatical purposes
+        playsound(r"path\fart.mp3")
     
     elif guess_counter == guess_count:
         print("You Lost")
-        playsound(r"C:\Users\devas\Downloads\lost.mp3")
-    
-    elif guess_counter < guess_count:
-        playsound(r"C:\Users\devas\Downloads\fart.mp3")
-
+        
+        #Playing sound for dramatical purposes
+        playsound(r"path\lost.mp3")
+        
+    #Incrementing the guess_counter variable otherwise the cood will go boom!
     guess_counter += 1
 
+    
+#Thankyou for looking at my code. Have a nice day.
