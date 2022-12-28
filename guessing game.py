@@ -68,7 +68,7 @@ while guess_counter <= guess_count:
         #Playing sound for dramatical purposes
         playsound(r"path\lost.mp3")
         
-    #Incrementing the guess_counter variable otherwise the cood will go boom!
+    #Incrementing the guess_counter variable otherwise the code will go boom!
     guess_counter += 1
 
     
